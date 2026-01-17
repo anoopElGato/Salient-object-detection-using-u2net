@@ -50,7 +50,7 @@ Based on the paper:
 - Mathematical and filter-based  
 - Works well on simple, high-contrast images  
 - Performs poorly on complex or cluttered scenes  
-![U²-Net Lite Architecture](images/Classical_method.png)
+![Classocal Method](images/Classical_method.png)
 ---
 
 ### 2. U²-Net Lite (Deep Learning Method)
