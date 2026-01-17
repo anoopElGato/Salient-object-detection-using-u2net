@@ -81,7 +81,7 @@ The architecture follows a nested U-structure with **lightweight Residual U-Bloc
 We use a **combined loss** to improve segmentation quality.
 
 
-![Loss Functions](images/Loss_function.jpg)
+![Loss Functions](images/Loss_functions.jpg)
 We use a combination of Binary Cross-Entropy (BCE) Loss and Dice Loss to balance pixel-level accuracy and object-level shape consistency.
 BCE loss helps the model learn correct foreground–background classification for each pixel, while Dice loss focuses on improving overlap between the predicted saliency map and the ground truth.
 This combination leads to more accurate boundaries and stable training, especially when foreground and background pixels are highly imbalanced.
