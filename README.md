@@ -50,7 +50,7 @@ Based on the paper:
 - Mathematical and filter-based  
 - Works well on simple, high-contrast images  
 - Performs poorly on complex or cluttered scenes  
-
+![U²-Net Lite Architecture](images/Classical_method.png)
 ---
 
 ### 2. U²-Net Lite (Deep Learning Method)
@@ -148,9 +148,10 @@ U²-Net Lite produces **cleaner object segmentation** and performs better in com
 ![Qualitative Comparison](images/Image_2.jpg)
 ![Qualitative Comparison](images/Image_4.jpg)
 ![Qualitative Comparison](images/Image_5.jpg)
-![Qualitative Comparison](images/Image_6.png)
+![Qualitative Comparison](images/Image_6.png) 
 
-Additional results are shows in Results folder.
+Additional results are in Results folder.
+
 ---
 
 ## Metric Comparison Plots
