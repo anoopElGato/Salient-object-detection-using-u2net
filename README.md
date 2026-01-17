@@ -161,7 +161,7 @@ The plots below compare:
 - F-measure  
 - Processing speed  
 
-![Metric Comparison](images/comparison_summary_with_smeasure.jpg)
+![Metric Comparison](images/comparison_summary_with_smeasure.png)
 
 ---
 
