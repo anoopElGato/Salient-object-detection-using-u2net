@@ -80,29 +80,8 @@ The architecture follows a nested U-structure with **lightweight Residual U-Bloc
 
 We use a **combined loss** to improve segmentation quality.
 
-### Total Loss
-\[
-\mathcal{L}(S, G) = \alpha \mathcal{L}_{BCE}(S, G) + \beta \mathcal{L}_{Dice}(S, G)
-\]
 
-### Binary Cross-Entropy Loss
-\[
-\mathcal{L}_{BCE} = -\frac{1}{HW} \sum_{i,j}
-\big[ G_{i,j}\log(S_{i,j}) + (1 - G_{i,j})\log(1 - S_{i,j}) \big]
-\]
-
-### Dice Loss
-\[
-\mathcal{L}_{Dice} =
-1 - \frac{2\sum_{i,j} S_{i,j}G_{i,j} + \epsilon}
-{\sum_{i,j} S_{i,j} + \sum_{i,j} G_{i,j} + \epsilon}
-\]
-
-Where:
-- \(\epsilon = 10^{-5}\) prevents division by zero  
-- \(\alpha = \beta = 1\)
-
-![Loss Functions](images/loss_function.png)
+![Loss Functions](images/Loss_function.jpg)
 We use a combination of Binary Cross-Entropy (BCE) Loss and Dice Loss to balance pixel-level accuracy and object-level shape consistency.
 BCE loss helps the model learn correct foreground–background classification for each pixel, while Dice loss focuses on improving overlap between the predicted saliency map and the ground truth.
 This combination leads to more accurate boundaries and stable training, especially when foreground and background pixels are highly imbalanced.
@@ -119,7 +98,7 @@ This combination leads to more accurate boundaries and stable training, especial
 
 ---
 
-## 📈 Training Performance
+##  Training Performance
 
 The following metrics were monitored during training:
 - Training & validation loss  
@@ -128,11 +107,11 @@ The following metrics were monitored during training:
 - IoU  
 - Structure-measure (S-measure)  
 
-![Training Performance](images/training_curves.png)
+![Training Performance](images/training_history.jpg)
 
 ---
 
-## 📊 Quantitative Results
+## Quantitative Results
 
 ### Performance Comparison (DUTS-TE)
 
@@ -144,7 +123,7 @@ The following metrics were monitored during training:
 
 ---
 
-## ⏱️ Model Efficiency
+##  Model Efficiency
 
 | Method | Average Time (seconds) |
 |------|------------------------|
@@ -156,7 +135,7 @@ The following metrics were monitored during training:
 
 ---
 
-## 🖼️ Qualitative Results
+## Qualitative Results
 
 The visual comparison includes:
 - Input image  
@@ -166,11 +145,15 @@ The visual comparison includes:
 
 U²-Net Lite produces **cleaner object segmentation** and performs better in complex scenes.
 
-![Qualitative Comparison](images/qualitative_comparison.png)
+![Qualitative Comparison](images/Image_1.jpg)
+![Qualitative Comparison](images/Image_2.jpg)
+![Qualitative Comparison](images/Image_4.jpg)
+![Qualitative Comparison](images/Image_5.jpg)
+![Qualitative Comparison](images/Image_6.jpg)
 
 ---
 
-## 📊 Metric Comparison Plots
+## Metric Comparison Plots
 
 The plots below compare:
 - Structure-measure  
@@ -179,7 +162,7 @@ The plots below compare:
 - F-measure  
 - Processing speed  
 
-![Metric Comparison](images/metric_comparison.png)
+![Metric Comparison](images/comparison_summary_with_smeasure.jpg)
 
 ---
 
