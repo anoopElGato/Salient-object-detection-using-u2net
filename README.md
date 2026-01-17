@@ -81,7 +81,7 @@ The architecture follows a nested U-structure with **lightweight Residual U-Bloc
 We use a **combined loss** to improve segmentation quality.
 
 
-![Loss Functions](images/Loss_functions.jpg)
+![Loss Functions](images/Loss_functions.png)
 We use a combination of Binary Cross-Entropy (BCE) Loss and Dice Loss to balance pixel-level accuracy and object-level shape consistency.
 BCE loss helps the model learn correct foreground–background classification for each pixel, while Dice loss focuses on improving overlap between the predicted saliency map and the ground truth.
 This combination leads to more accurate boundaries and stable training, especially when foreground and background pixels are highly imbalanced.
@@ -107,7 +107,7 @@ The following metrics were monitored during training:
 - IoU  
 - Structure-measure (S-measure)  
 
-![Training Performance](images/training_history.jpg)
+![Training Performance](images/training_history.png)
 
 ---
 
@@ -131,7 +131,6 @@ The following metrics were monitored during training:
 | U²-Net Lite | 0.120 |
 | U²-Net | 0.033 |
 
-![Efficiency Comparison](images/efficiency_table.png)
 
 ---
 
@@ -145,11 +144,11 @@ The visual comparison includes:
 
 U²-Net Lite produces **cleaner object segmentation** and performs better in complex scenes.
 
-![Qualitative Comparison](images/Image_1.jpg)
+![Qualitative Comparison](images/Image_1.png)
 ![Qualitative Comparison](images/Image_2.jpg)
 ![Qualitative Comparison](images/Image_4.jpg)
 ![Qualitative Comparison](images/Image_5.jpg)
-![Qualitative Comparison](images/Image_6.jpg)
+![Qualitative Comparison](images/Image_6.png)
 
 ---
 
