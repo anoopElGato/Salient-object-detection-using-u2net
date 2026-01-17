@@ -150,6 +150,7 @@ U²-Net Lite produces **cleaner object segmentation** and performs better in com
 ![Qualitative Comparison](images/Image_5.jpg)
 ![Qualitative Comparison](images/Image_6.png)
 
+Additional results are shows in Results folder.
 ---
 
 ## Metric Comparison Plots
@@ -164,4 +165,47 @@ The plots below compare:
 ![Metric Comparison](images/comparison_summary_with_smeasure.png)
 
 ---
+## Key Observations
+
+- **U²-Net Lite achieves 93.7% of the full U²-Net’s F-measure**, with a score of **0.715 vs 0.763**, despite being significantly smaller.
+- The **Lite model reduces MAE by 66.14%** compared to classical Saliency Filters (**0.073 vs 0.238**), showing much better pixel-level accuracy.
+- **Parameter efficiency:** U²-Net Lite uses **98.3% fewer parameters** than the full U²-Net (**730K vs 44M**), making it highly suitable for resource-constrained environments.
+
+---
+
+## Failure Cases
+
+Despite strong overall performance, **U²-Net Lite** has some limitations:
+
+- **Transparent objects:** Glass, water, and other transparent materials are difficult to segment accurately.
+- **Extreme scale variation:** Very small objects (less than 5% of the image area) may be missed.
+- **Motion blur:** Heavy blur degrades feature quality and affects saliency prediction.
+
+These cases highlight challenges common to lightweight segmentation models.
+
+---
+
+## Conclusion and Future Work
+
+This work presents **U²-Net Lite**, a lightweight salient object detection architecture that achieves an excellent **accuracy–efficiency trade-off**.
+
+By systematically reducing model complexity—**halving channel sizes** and **reducing encoder stages from 6 to 4**—we achieve a **98% parameter reduction (730K vs 44M)** while retaining **93.7% of the full U²-Net’s F-measure** on the DUTS-TE dataset.
+
+U²-Net Lite significantly outperforms **classical Saliency Filters** across all evaluation metrics, demonstrating the advantage of **learned hierarchical features** over hand-crafted contrast-based approaches.
+
+The inclusion of **S-measure** further highlights U²-Net Lite’s ability to preserve both **structural consistency** and **object boundaries**, making it suitable for **real-time applications**, **edge devices**, and **mobile platforms**.
+
+### Future Work
+
+Possible directions for further improvement include:
+
+1. **Extreme compression:** Pruning, INT8 quantization, and knowledge distillation to reduce model size below 1MB.
+2. **Architecture search:** AutoML-based optimization of encoder–decoder configurations.
+3. **Multi-task learning:** Joint training for saliency detection, segmentation, and object detection.
+4. **Domain adaptation:** Zero-shot or few-shot transfer to domains such as medical and aerial imagery.
+5. **Attention mechanisms:** Incorporating self-attention to capture long-range dependencies.
+6. **Video SOD:** Extending the model to video with temporal consistency across frames.
+
+This work demonstrates that **careful architectural design** can deliver strong performance with minimal computational resources, making advanced salient object detection accessible to a wider range of real-world applications.
+
 
