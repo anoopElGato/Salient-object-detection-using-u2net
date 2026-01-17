@@ -72,7 +72,7 @@ The architecture follows a nested U-structure with **lightweight Residual U-Bloc
 - Multi-scale feature extraction  
 - Deep supervision using side outputs  
 
-![U²-Net Lite Architecture](Images/Model_Architecture.jpg)
+![U²-Net Lite Architecture](images/Model_Architecture.jpg)
 
 ---
 
